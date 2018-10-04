@@ -3,69 +3,35 @@
   <head>
     <meta charset="utf-8">
   </head>
+   
   <body>
-<p>Gistの使い方のメモ
-Gistを使い始めて気がついた点をメモした。 Gistはこのようなメモや短いコードをバージョン管理しながら公開するのに便利。<br>
-
-特にこのメモでは、画像を同一ディレクトリに置いて、 それGFMファイル内に挿入する方法を解説。<br>
-
-このメモにはgitコマンドの使い方の解説はない。 このメモは随時更新される予定。 Tipsなどのコメントを乞う。<br>
-
-gitコマンドで手もとにcloneできる<br>
-例えば git clone https://gist.github.com/9580883.git HowToGist もしくは git clone git@gist.github.com:9580883.git HowToGist とすればHowToGist/と<br>いうディレクトリが作られ、 その中にHowToGist.mdなどいくつかのファイルと.git/ディレクトリがcloneされる。<br>
-
-Gistのwebエディタ Ace はまだ日本語の編集に少し難があるので、Gistの文章は手もとで編集してgit pushするのが便利である。<br>
-
-１つのエントリーに複数のファイルを置くことができる<br>
-１つのエントリーには１つのディレクトリが割り当てられ、そこに複数のファイルを置くことができる。 複数のファイルの表示順序は現在はアルファベット順のようである。 （以前は ASCIIbetical order で あった。）<br>
-
-.gitignoreはローカルだけに置く<br>
-Gistに.gitignoreを置くと見せたいファイルよりアルファベット順でで前にきてしまって、 .gitignoreが前面に出てきてしまう。 Gist用の.gitignoreはローカルだけに置くことにする。 その場合.gitignoreの中に.gitignoreも書く。 例えば https://gist.github.com/t-nissie/9771048 のための.gitignoreはこんなかんじ:<br>
-
-*.dSYM<br>
-*.log<br>
-*.o<br>
-crd2enex<br>
-science.crd<br>
-science.enex<br>
-.gitignore<br>
-GitHub Flavored Markdown (GFM) で書かれたものはHTMLに変換されて表示される<br>
-このHowToGist.mdのように、 GitHub Flavored Markdown (GFM) で書かれたファイルはHTMLに変換されて表示される。 意味のあるファイル名を持ったGFMファイルが先頭に置<br>かれてうまくHTML表示されるには、 ディレクトリ内のすべてのファイル名を工夫する必要がある。<br>
-
-手もとでGFMファイルをHTMLファイルに変換するには次に挙げるようないくつかの方法がある。<br>
-
-Ruby Gemのgithub-markdownを用いる<br>
-gfm2html.rb<br>
-公式APIを使う<br>
-gfm2html.sh<br>
-Firefox add-on GFM Viewer<br>
-grip<br>
-後から画像を置くこともできる<br>
-git add vietnam.jpgで後から画像を置くこともできる。 その画像は https://gist.github.com/t-nissie/9580883/raw/vietnam.jpg とgistのURLと画像のファイル名と<br>の間にraw/を挿入することで参照することができる。 2016年1月現在、この方法はJPEG, PNG, GIFファイルには有効だが、SVGファイルだとうまくいかない。</p>
-<p>ブログなどにGistの内容を貼り付ける<br>
-ブログなどにGistの内容を貼り付けるには、Gistの最上部でEmbedを選択して得られる<br>
-
- <script src="https://gist.github.com/t-nissie/021f09aa327f02d0a710.js"></script>
-などを使う。たとえば https://gist.github.com/t-nissie/021f09aa327f02d0a710 を貼り付けてみると
-
-<script src="https://gist.github.com/t-nissie/021f09aa327f02d0a710.js"></script>
-となる。（Gistでは表示されない。手元でgfm2html.rbを使って変換したHTMLなら表示される。）
-
-Secret Gistとは<br>
-Gistを作るとき、それをSecret Gistと指定することもできる。 Secret GistのURLを友人に送ればそのGist文書を友人間で共有できる。 Secret GistはGoogleなどのサーチエ<br>ンジンの対象外にはなるが、 閲覧にパスワードが必要というわけではない。 Secret Gistは自分のGistのページで金色の枠が付いて表示される。<br>
-
-例えば、学術論文のLaTeXソースコードや図のPDFファイルをSecret Gistに置いて、 それらを共著者と共有すると便利である。 編集の履歴が残るので、論文の正当性の証明の１つとして使えるかもしれない。<br>
-
-GitHubにspammer/spammyと誤認されてしまったら<br>
-あなたがあなたのGistにアクセスして "Whoops. We seem to have missed the gist of that gist you were looking for." 表示されたら、あなたはGitHubにspammer/spammyと誤認されている。 GitHubにアクセスして "One of our mostly harmless robots seems to think you are not a human." と赤で表示される場合も同様に誤認されている。<br>
-
-焦らずに https://github.com/contact を通して報告すれば、数時間以内に直してもらえる。<br>
-
-</p>
-    <a href="index.html">Homeへ</a><br>
+       <h1>1．Gistの使い方のメモ</h1>
+     <p>まずgithubにログインまたはアカウント作成する。</p>
+      <p>ログインしたら下記のURLに移動する。</p>
+        <a href="https://gist.github.com/">gistの作成ページへ</a>
+            <img src="gistimg/gist007.png">
       
-    <a href="issue.html">issuesの説明へ。</a>
-    
+      
+      
+      <h2>2．gistを使って試しにコードを張り付けてみよう</h2>
+            <img src="gistimg/gist%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9.jpg">
+                <p>このように概要とタイトルとコードを入力</p>
+                    <p>したらcreate public gistというボタンを押しましょう。</p>
+                        <p>そうすると.....</p>
+      <img src="gistimg/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-(184).jpg">
+        <p>このような画面が出てきます。</p>
+                <p>そしてその中から</p>
+      <img src="gistimg/gist%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%89%E3%82%92%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF%E4%BD%9C%E6%A5%AD.jpg">
+      <p>それではこのコピーしたコードを実際にここにペーストすると....</p>
+      <script src="https://gist.github.com/maruoryo810/941809234bdda090f1de12fef939b221.js"></script>
+      <p>このようにGistを使えばきれいにソースコードを張り付けることができます。</p>
+      <a href="index.html">ホームへ</a>
+      
+      
+      
+      
+      
+      
   </body>
 </html>
 
