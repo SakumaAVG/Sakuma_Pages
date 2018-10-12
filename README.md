@@ -8,11 +8,11 @@ github のGistの使い方について<br>
 githubリポジトリのProjectsタブの活用について<br>
 githubリポジトリのWikiタブの活用について<br>
 github の pull requestにあるMilestones の使い方 <br>
+GitHub と Slack を連携させる方法と利用事例について<br>
 <br>
 B.実装できなかった課題のタイトル<br>
 githubリポジトリのInsightsタブでの活動分析について<br>
 github のemoticonやLTTMについて<br>
-GitHub と Slack を連携させる方法と利用事例について<br>
 ZenHub for GitHubの活用方法について<br>
 <br>
 C.課題の実装するにあたって、起こった障害や苦労したこと<br>
